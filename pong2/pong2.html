@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pong 2</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/pong2.js"></script>
+	<link rel="stylesheet" href="css/pong2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container"> <!-- contains all elements on page -->
+        <audio id="bounce_sound" src="audio/bounce.mp3"></audio>
+        <audio id="score_sound" src="audio/score.mp3"></audio>
+        <audio id="rainbow_sound" loop src="audio/rainbow.mp3"></audio>
+        <div id="scores"> <!-- contains scores of user and cpu for current game -->
+            <div id="user_score">10</div> <!-- current score for user -->
+            <div id="cpu_score">10</div> <!-- current score for cpu -->
+        </div>
+        <div id="win_counter"> <!-- contains the number of wins for the user and cpu -->
+            <div id="user_wins_label">wins
+                <div id="user_wins">0</div> <!-- the number of wins for the user -->
+            </div> <!-- the number of wins for the user -->
+            <div id="cpu_wins_label">wins
+                <div id="cpu_wins">0</div> <!-- the number of wins for the cpu -->
+            </div> <!-- the number of wins for the cpu -->
+        </div>
+        <div id="playfield"> <!-- this is the area within which the pong game is actually played -->
+            <div id="user_paddle"></div> <!-- initial user paddle -->
+            <div id="cpu_paddle"></div> <!-- initial cpu paddle -->
+        </div>
+        <button id="start">Start</button> <!-- button used to start the initial game and to play the game again -->
+        <div id="gameover"></div> <!-- message displayed at end of each game, depends on winner -->
+        <ol id="highscores">highscores <!-- contains list of high scores -->
+            <li id="highscore1">none</li>  <!-- best high score -->
+            <li id="highscore2">none</li>
+            <li id="highscore3">none</li>
+            <li id="highscore4">none</li>
+            <li id="highscore5">none</li>  <!-- worst high score -->
+        </ol>
+    </div>
+</body>
+</html>

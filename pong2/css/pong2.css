@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Silkscreen&display=swap');
+
+
+body
+{
+    background: black;
+    font-family: "Silkscreen", "Courier", monospace;
+}
+   
+        #scores /* contains scores of user and cpu for current game */
+        {
+            height: 200px;
+            width: 1000px;
+            transform: translateX(50vw) translateX(-50%) translateY(50vh) translateY(-50%); 
+            position: absolute;
+        }
+        
+            #user_score , #cpu_score/* current score for user */
+            {
+                color: white;
+                text-align: center;
+                line-height: 200px;
+                font-size: 500%;
+                height: 200px;
+                width: 200px;
+                top: 0;
+                position: absolute;
+            }
+            
+            #user_score
+            {
+                left: 0;
+            }
+            
+            #cpu_score /* current score for cpu */
+            {
+                right: 0;
+            }
+        
+        #win_counter /* contains the number of wins for the user and cpu */
+        {
+            height: 200px;
+            width: 1000px;
+            transform: translateX(50vw) translateX(-50%); 
+            position: absolute;
+        }
+
+            #user_wins_label /* the number of wins for the user */
+            {
+                color: white;
+                padding-top: 60px;
+                text-align: center;
+                font-size: 300%;
+                height: 200px;
+                width: 200px;
+                top: 0;
+                position: absolute;
+            }
+            
+            #cpu_wins_label /* the number of wins for the cpu */
+            {
+                color: white;
+                padding-top: 60px;
+                text-align: center;
+                font-size: 300%;
+                height:200px;
+                width: 200px;
+                top: 0;
+                right: 0;
+                position: absolute;
+            }
+
+        #playfield /* this is the area within which the pong game is actually played */
+        {
+            transform: translateX(50vw) translateX(-50%) translateY(50vh) translateY(-50%);
+            border: 10px dashed white;
+
+            position: relative;
+        }
+        
+            #user_paddle /* initial user paddle */
+            {
+                background: white;
+                width: 20px;
+                height: 100px;
+                top: 25%;
+                position: absolute;
+            }
+            
+            #cpu_paddle /* initial cpu paddle */
+            {
+                background: white;
+                width: 20px;
+                height: 200px;
+                top: 25%;
+                position: absolute;
+            }
+        
+        #start /* button used to start the initial game and to play the game again */
+        {
+            border: 0;
+            background: none;
+            color: white;
+            font-family: "Silkscreen", "Courier", monospace;
+            text-align: center;
+            font-size: 300%;
+            height: 100px;
+            width: 300px;
+            transform: translateY(60vh) translateX(50vw) translateX(-50%);
+            top: 0;
+            position: absolute;
+        }
+        
+        #start:hover
+        {
+            border: 5px dashed white;
+        }
+    
+        #highscores /* contains list of high scores */
+        {
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            background: black;
+            color: white;
+            font-size: 150%;
+            transform: translateY(40%) translateX(50vw) translateX(-50%);
+            top: 0;
+            position: absolute;
+        }     
